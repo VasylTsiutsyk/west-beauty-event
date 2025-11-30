@@ -2,14 +2,15 @@
 @use '@styles/helpers' as *;
 
 .header {
-  --header-py: #{rem(16)};
+  --header-py: #{fluid(24, 12)};
 
   position: fixed;
   z-index: var(--z-header);
   left: 0;
   top: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--color-white);
+  color: var(--color-black);
   transition:
     box-shadow var(--transition-duration),
     background-color var(--transition-duration),
@@ -20,7 +21,6 @@
   }
 
   &._scrolled {
-    background-color: var(--color-white);
   }
 
   &._hidden {
@@ -233,9 +233,15 @@
   &__list {
     @include respond-above(md) {
       display: flex;
+      flex: 1 1 auto;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       gap: rem(12) rem(24);
+    }
+
+    @include respond-above(2xl) {
+      column-gap: rem(36);
     }
 
     > li {
@@ -293,10 +299,10 @@
       > a {
         @include respond-above(md) {
           display: inline-block;
-          padding: rem(2) rem(4);
-          font-size: rem(16);
+          padding: rem(2);
+          font-size: rem(15);
           font-weight: 400;
-          line-height: 1.2;
+          line-height: 153.33%;
           text-transform: capitalize;
           transition: color var(--transition-duration);
 

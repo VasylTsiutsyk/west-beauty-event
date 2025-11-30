@@ -4,7 +4,50 @@
 .hero {
   --hero-py: 3rem;
 
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-black);
+  color: var(--color-white);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgb(var(--color-black-rgb) / 50%);
+    pointer-events: none;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    picture {
+      display: contents;
+    }
+
+    img {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      will-change: scale;
+      transition: scale 1.25s;
+      block-size: 100%;
+      inline-size: 100%;
+      scale: 1.1;
+
+      ._loaded & {
+        scale: 1;
+      }
+    }
+  }
+
   &__wrap {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
     padding-block: var(--hero-py);
   }
 
@@ -16,17 +59,27 @@
     }
   }
 
-  &__body {
-    --mb: #{rem(24)};
+  &__title {
+    max-inline-size: rem(580);
 
     &:not(:last-child) {
-      margin-block-end: var(--mb);
+      margin-block-end: var(--space-6);
+    }
+  }
+
+  &__body {
+    &:not(:last-child) {
+      margin-block-end: var(--space-7);
     }
   }
 
   &__btn-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--space-4);
+
+    @include respond-below(md) {
+      flex-direction: column;
+    }
   }
 }

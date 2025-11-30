@@ -56,18 +56,33 @@
     }
   }
 
+  &--outline-white {
+    --button-border-color: var(--color-white);
+    --button-bg-color: transparent;
+    --button-text-color: var(--color-white);
+    --button-ring-color: var(--button-border-color);
+
+    &:not(:disabled) {
+      @include hover {
+        --button-border-color: var(--color-white);
+        --button-bg-color: var(--color-white);
+        --button-text-color: var(--color-black);
+      }
+
+      &:active {
+        --button-border-color: var(--color-white);
+        --button-bg-color: var(--color-white);
+        --button-text-color: var(--color-black);
+      }
+    }
+  }
+
   &:not(:disabled, ._disabled) {
     cursor: pointer;
 
-    @include hover {
-    }
-
     &:focus-visible {
-      outline: rem(2) dashed var(--color-primary);
+      outline: rem(2) dashed var(--button-ring-color);
       outline-offset: rem(4);
-    }
-
-    &:active {
     }
   }
 }

@@ -1,0 +1,29 @@
+@use '@styles/helpers' as *;
+
+/* Social List */
+.soc {
+  --soc-link-size: #{rem(30)};
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(15);
+
+  > li {
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--soc-link-size);
+      background-color: var(--color-primary);
+      font-size: calc(var(--soc-link-size) * 0.5);
+      color: var(--color-black);
+      transition: opacity var(--transition-duration);
+      block-size: var(--soc-link-size);
+      inline-size: var(--soc-link-size);
+
+      @include hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}

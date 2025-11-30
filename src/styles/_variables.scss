@@ -43,9 +43,9 @@
   --heading-anchor-offset: var(--header-height);
 
   // h1
-  --h1-font-size: #{fluid(64, 32)};
+  --h1-font-size: #{fluid(110, 48)};
   --h1-font-weight: var(--display-font-weight);
-  --h1-line-height: var(--display-line-height);
+  --h1-line-height: 1.1;
   --h1-letter-spacing: var(--display-letter-spacing);
 
   // h2
@@ -104,6 +104,11 @@
   --color-white-70: rgb(var(--color-white-rgb) / 70%);
   --color-white-80: rgb(var(--color-white-rgb) / 80%);
   --color-white-90: rgb(var(--color-white-rgb) / 90%);
+  --color-white-doctor: #f9f9f9;
+  --color-white-fever: #fbf3e8;
+
+  // Other
+  --color-durazno-maduro: #fdb978;
 
   // Gray
   --color-gray: #c8c8c8;
@@ -122,12 +127,13 @@
   --color-info: #17a2b8;
 
   // Primary/Secondary
-  --color-primary: var(--color-info);
+  --color-primary: var(--color-durazno-maduro);
 
   /* Transitions */
   --transition-duration: 0.35s;
   --transition-duration-short: 0.25s;
   --transition-duration-long: 0.5s;
+  --transition-duration-slow: 0.75s;
   --transition-primary: all var(--transition-duration) ease;
 
   /* Border Radius */
@@ -155,15 +161,16 @@
   --button-border-width: 1px;
   --button-border-style: solid;
   --button-border-color: var(--color-primary);
-  --button-border-radius: 0.25rem;
-  --button-height: 3rem;
-  --button-px: 1rem;
+  --button-border-radius: #{rem(52)};
+  --button-height: #{rem(52)};
+  --button-px: #{rem(36)};
   --button-py: 0.5rem;
-  --button-font-size: 1rem;
-  --button-font-weight: 400;
+  --button-font-size: #{rem(17.6)};
+  --button-font-weight: 700;
   --button-line-height: 1;
   --button-bg-color: var(--color-primary);
-  --button-text-color: var(--color-white);
+  --button-text-color: var(--color-black);
+  --button-ring-color: var(--button-border-color);
 
   /* Input */
   --input-border-width: 1px;
@@ -225,6 +232,7 @@
   --space-3: 0.75rem;
   --space-4: 1rem;
   --space-6: 1.5rem;
+  --space-7: 1.75rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
