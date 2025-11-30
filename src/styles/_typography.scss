@@ -1,0 +1,178 @@
+/* Typography */
+@use '@styles/helpers' as *;
+
+a[x-apple-data-detectors] {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+// Щоб збільшити область кліку (мін. 44px)
+a,
+button {
+  &:not(.menu__btn) {
+    &[aria-label] {
+      position: relative;
+
+      &::after {
+        content: '';
+
+        @include abs-center;
+        @include square(rem(44));
+      }
+    }
+  }
+}
+
+picture {
+  display: inline-block;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+code {
+  border: 1px dashed #999;
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.3rem 0.2rem;
+  background: #fff3f4;
+  box-decoration-break: clone;
+  word-wrap: break-word;
+}
+
+:where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+  font-family: var(--display-font-family);
+  text-wrap: balance;
+
+  &[id] {
+    scroll-margin-top: var(--heading-anchor-offset);
+  }
+}
+
+:where(h1, .h1) {
+  font-size: var(--h1-font-size);
+  font-weight: var(--h1-font-weight);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+}
+
+:where(h2, .h2) {
+  font-size: var(--h2-font-size);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+}
+
+:where(h3, .h3) {
+  font-size: var(--h3-font-size);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+}
+
+:where(h4, .h4) {
+  font-size: var(--h4-font-size);
+  font-weight: var(--h4-font-weight);
+  line-height: var(--h4-line-height);
+  letter-spacing: var(--h4-letter-spacing);
+}
+
+:where(h5, .h5) {
+  font-size: var(--h5-font-size);
+  font-weight: var(--h5-font-weight);
+  line-height: var(--h5-line-height);
+  letter-spacing: var(--h5-letter-spacing);
+}
+
+:where(h6, .h6) {
+  font-size: var(--h6-font-size);
+  font-weight: var(--h6-font-weight);
+  line-height: var(--h6-line-height);
+  letter-spacing: var(--h6-letter-spacing);
+}
+
+@supports not (text-wrap: balance) {
+  :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Description Text */
+.desc-text {
+  // General
+  --text-font-size: #{rem(16)};
+  --text-font-weight: var(--body-font-weight);
+  --text-line-height: var(--body-line-height);
+  --text-letter-spacing: var(--body-letter-spacing);
+  --text-flow-spacing: 1em;
+
+  // Paragraph
+  --text-paragraph-spacing: 1em;
+
+  // List
+  --text-list-spacing: 1em;
+  --text-list-indent-spacing: 1.25em;
+  --text-list-item-spacing: 0.25em;
+
+  // Blockquote
+  --text-blockquote-indent-spacing: 1em;
+
+  overflow-wrap: anywhere;
+  font-size: var(--text-font-size);
+  font-weight: var(--text-font-weight);
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+  hyphens: auto;
+
+  &--lg {
+    --text-font-size: #{fluid(18, 16)};
+  }
+
+  > :is(ul, ol) {
+    margin-block: var(--text-list-spacing);
+    padding-inline-start: var(--text-list-indent-spacing);
+  }
+
+  :is(ul, ol) > li + li {
+    margin-block-start: var(--text-list-item-spacing);
+  }
+
+  a {
+    &:not([class]) {
+      text-decoration: underline;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  span {
+    &[style*='font-weight'] {
+      font-weight: inherit !important;
+    }
+  }
+
+  blockquote {
+    border-inline-start: rem(2) solid var(--color-primary);
+    padding-inline-start: var(--text-blockquote-indent-spacing);
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  em,
+  i {
+    font-style: italic;
+  }
+
+  :where(&) > :where(* + *) {
+    margin-block-start: var(--text-flow-spacing);
+  }
+}

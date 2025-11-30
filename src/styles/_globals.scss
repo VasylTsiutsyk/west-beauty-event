@@ -1,0 +1,64 @@
+/* stylelint-disable declaration-no-important */
+
+/* ========== GLOBALS ========== */
+@use '@styles/helpers' as *;
+
+// just for example, need to remove
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap';
+
+/* Body */
+body {
+  background-color: var(--color-bg);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  color: var(--color-text);
+
+  &:has(.preloader) {
+    overflow: hidden;
+  }
+}
+
+/* Scrollbars */
+* {
+  @include scrollbars(
+    var(--scrollbar-width),
+    var(--scrollbar-thumb-color),
+    var(--scrollbar-bg-color),
+    var(--scrollbar-border-radius));
+}
+
+/* Selection */
+::selection {
+  background-color: var(--selection-bg-color);
+  color: var(--selection-text-color);
+}
+
+/* Scrolling Target */
+:target {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Pages List */
+.pages-list {
+  --list-indent-spacing: 2em;
+  --list-item-spacing: 0.5rem;
+
+  padding-inline-start: var(--list-indent-spacing);
+
+  > li {
+    &:not(:last-child) {
+      margin-block-end: var(--list-item-spacing);
+    }
+
+    > a {
+      text-decoration: underline;
+      transition: color var(--transition-duration);
+
+      @include hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+}

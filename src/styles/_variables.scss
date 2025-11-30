@@ -1,0 +1,267 @@
+@use 'helpers' as *;
+
+:root {
+  /* Viewport  */
+  --viewport-height: 100dvh;
+  --viewport-width: 100dvw;
+
+  /* BASE (in px) */
+  --base-font-size: 16px;
+
+  /* Container Settings */
+  --content-width: #{rem(1280)};
+  --content-width-xs: #{rem(760)};
+  --content-width-sm: #{rem(980)};
+  --content-width-lg: #{rem(1580)};
+  --container-padding: #{rem(24)};
+  --container: calc(var(--content-width) + 2 * var(--container-padding));
+  --container-xs: calc(var(--content-width-xs) + 2 * var(--container-padding));
+  --container-sm: calc(var(--content-width-sm) + 2 * var(--container-padding));
+  --container-lg: calc(var(--content-width-lg) + 2 * var(--container-padding));
+
+  /* Fonts */
+  --font-family-poppins: 'Poppins', sans-serif;
+  --font-family-arial: 'Arial', 'Helvetica', sans-serif;
+  --font-family-primary: var(--font-family-poppins);
+  --font-family-secondary: var(--font-family-arial);
+  --font-icons: 'iconfont';
+
+  /* Fonts Body */
+  --body-font-family: var(--font-family-primary);
+  --body-font-size: 1rem;
+  --body-font-weight: 400;
+  --body-line-height: 1.42;
+  --body-letter-spacing: 0;
+
+  /* Fonts Display (Heading) */
+  --display-font-family: var(--font-family-primary);
+  --display-font-weight: 700;
+  --display-line-height: 1.2;
+  --display-letter-spacing: 0;
+
+  // Headings
+  --heading-anchor-offset: var(--header-height);
+
+  // h1
+  --h1-font-size: #{fluid(64, 32)};
+  --h1-font-weight: var(--display-font-weight);
+  --h1-line-height: var(--display-line-height);
+  --h1-letter-spacing: var(--display-letter-spacing);
+
+  // h2
+  --h2-font-size: #{fluid(48, 24)};
+  --h2-font-weight: var(--display-font-weight);
+  --h2-line-height: var(--display-line-height);
+  --h2-letter-spacing: var(--display-letter-spacing);
+
+  // h3
+  --h3-font-size: #{fluid(24, 20)};
+  --h3-font-weight: var(--display-font-weight);
+  --h3-line-height: var(--display-line-height);
+  --h3-letter-spacing: var(--display-letter-spacing);
+
+  // h4
+  --h4-font-size: #{fluid(20, 16)};
+  --h4-font-weight: var(--display-font-weight);
+  --h4-line-height: var(--display-line-height);
+  --h4-letter-spacing: var(--display-letter-spacing);
+
+  // h5
+  --h5-font-size: #{fluid(18, 16)};
+  --h5-font-weight: var(--display-font-weight);
+  --h5-line-height: var(--display-line-height);
+  --h5-letter-spacing: var(--display-letter-spacing);
+
+  // h6
+  --h6-font-size: #{fluid(16, 14)};
+  --h6-font-weight: var(--display-font-weight);
+  --h6-line-height: var(--display-line-height);
+  --h6-letter-spacing: var(--display-letter-spacing);
+
+  /* Colors */
+  // Black
+  --color-black: #000;
+  --color-black-rgb: 0 0 0;
+  --color-black-10: rgb(var(--color-black-rgb) / 10%);
+  --color-black-20: rgb(var(--color-black-rgb) / 20%);
+  --color-black-30: rgb(var(--color-black-rgb) / 30%);
+  --color-black-40: rgb(var(--color-black-rgb) / 40%);
+  --color-black-50: rgb(var(--color-black-rgb) / 50%);
+  --color-black-60: rgb(var(--color-black-rgb) / 60%);
+  --color-black-70: rgb(var(--color-black-rgb) / 70%);
+  --color-black-80: rgb(var(--color-black-rgb) / 80%);
+  --color-black-90: rgb(var(--color-black-rgb) / 90%);
+
+  // White
+  --color-white: #fff;
+  --color-white-rgb: 255 255 255;
+  --color-white-10: rgb(var(--color-white-rgb) / 10%);
+  --color-white-20: rgb(var(--color-white-rgb) / 20%);
+  --color-white-30: rgb(var(--color-white-rgb) / 30%);
+  --color-white-40: rgb(var(--color-white-rgb) / 40%);
+  --color-white-50: rgb(var(--color-white-rgb) / 50%);
+  --color-white-60: rgb(var(--color-white-rgb) / 60%);
+  --color-white-70: rgb(var(--color-white-rgb) / 70%);
+  --color-white-80: rgb(var(--color-white-rgb) / 80%);
+  --color-white-90: rgb(var(--color-white-rgb) / 90%);
+
+  // Gray
+  --color-gray: #c8c8c8;
+
+  /* Semantic */
+  --color-bg: var(--color-white); // фон сторінки/секцій
+  --color-surface: var(--color-white); // фон компонентів: .card, .modal, .dropdown, .tooltip, input/select
+  --color-text: var(--color-black);
+  --color-muted: var(--color-gray);
+  --color-border: var(--color-gray);
+
+  // States
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-info: #17a2b8;
+
+  // Primary/Secondary
+  --color-primary: var(--color-info);
+
+  /* Transitions */
+  --transition-duration: 0.35s;
+  --transition-duration-short: 0.25s;
+  --transition-duration-long: 0.5s;
+  --transition-primary: all var(--transition-duration) ease;
+
+  /* Border Radius */
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;
+  --radius-12: 0.75rem;
+  --radius-16: 1rem;
+  --radius-20: 1.25rem;
+  --radius-24: 1.5rem;
+  --radius-32: 2rem;
+  --radius-36: 2.25rem;
+
+  /* Scrollbar */
+  --scrollbar-border-radius: 0;
+  --scrollbar-width: 0.5rem;
+  --scrollbar-height: 0.5rem;
+  --scrollbar-bg-color: var(--color-gray);
+  --scrollbar-thumb-color: var(--color-primary);
+
+  /* Selection */
+  --selection-bg-color: var(--color-primary);
+  --selection-text-color: var(--color-white);
+
+  /* Button */
+  --button-border-width: 1px;
+  --button-border-style: solid;
+  --button-border-color: var(--color-primary);
+  --button-border-radius: 0.25rem;
+  --button-height: 3rem;
+  --button-px: 1rem;
+  --button-py: 0.5rem;
+  --button-font-size: 1rem;
+  --button-font-weight: 400;
+  --button-line-height: 1;
+  --button-bg-color: var(--color-primary);
+  --button-text-color: var(--color-white);
+
+  /* Input */
+  --input-border-width: 1px;
+  --input-border-style: solid;
+  --input-border-color: var(--color-black);
+  --input-border-radius: 0.25rem;
+  --input-height: 3rem;
+  --input-px: 1rem;
+  --input-py: 0.5rem;
+  --input-font-size: 1rem;
+  --input-font-weight: 400;
+  --input-line-height: 1;
+  --input-bg-color: var(--color-white);
+  --input-text-color: var(--color-black);
+  --input-placeholder-color: var(--color-black-80);
+
+  /* Select */
+  --select-border-width: 1px;
+  --select-border-style: solid;
+  --select-border-color: var(--color-black);
+  --select-border-radius: 0.25rem;
+  --select-height: 3rem;
+  --select-px: 1rem;
+  --select-py: 0.5rem;
+  --select-font-size: 1rem;
+  --select-font-weight: 400;
+  --select-line-height: 1;
+  --select-bg-color: var(--color-white);
+  --select-text-color: var(--color-black);
+  --select-placeholder-color: var(--color-black-80);
+  --select-arrow-icon: var(--icon-chevron-down);
+
+  // Grid
+  --grid-1: repeat(1, minmax(0, 1fr));
+  --grid-2: repeat(2, minmax(0, 1fr));
+  --grid-3: repeat(3, minmax(0, 1fr));
+  --grid-4: repeat(4, minmax(0, 1fr));
+  --grid-5: repeat(5, minmax(0, 1fr));
+  --grid-6: repeat(6, minmax(0, 1fr));
+  --grid-7: repeat(7, minmax(0, 1fr));
+  --grid-8: repeat(8, minmax(0, 1fr));
+  --grid-9: repeat(9, minmax(0, 1fr));
+  --grid-10: repeat(10, minmax(0, 1fr));
+  --grid-11: repeat(11, minmax(0, 1fr));
+  --grid-12: repeat(12, minmax(0, 1fr));
+  --grid-1-2: minmax(0, 1fr) minmax(0, 2fr);
+  --grid-1-3: minmax(0, 1fr) minmax(0, 3fr);
+  --grid-2-1: minmax(0, 2fr) minmax(0, 1fr);
+  --grid-2-3: minmax(0, 2fr) minmax(0, 3fr);
+  --grid-3-1: minmax(0, 3fr) minmax(0, 1fr);
+  --grid-3-2: minmax(0, 3fr) minmax(0, 2fr);
+
+  /* Header */
+  --header-height: #{rem(80)};
+
+  /* Spacing scale (4pt) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* z-index layers */
+  --z-base: 0;
+  --z-section-inner: 10;
+  --z-header: 100;
+  --z-header-inner: 110;
+  --z-dropdown: 900;
+  --z-sticky: 1000;
+  --z-modal: 1100;
+  --z-popover: 1200;
+  --z-toast: 1300;
+
+  /* focus ring */
+  --focus-ring-offset: #{rem(2)};
+  --focus-ring-width: #{rem(2)};
+  --focus-ring-color: var(--color-primary);
+  --focus-ring:
+    0 0 0 var(--focus-ring-offset) var(--color-bg),
+    0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width)) var(--focus-ring-color);
+
+  /* Tablet */
+  @include respond-below(md) {
+    // Container
+    --container-padding: #{rem(16)};
+  }
+
+  @supports not (height: 100dvh) {
+    --viewport-height: 100vh;
+    --viewport-width: 100vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-duration: 0s;
+  }
+}

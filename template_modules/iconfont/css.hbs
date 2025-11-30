@@ -1,0 +1,31 @@
+/* Icons */
+@font-face {
+	font-family: "{{fontName}}";
+  src: {{{src}}};
+	font-display: swap;
+  font-weight: 400;
+}
+
+:root {
+{{#each codepoints}}
+  --{{../classPrefix}}{{@key}}: "\\{{this}}";
+{{/each}}
+}
+
+[class*="{{classPrefix}}"] {
+  display: inline-flex;
+  align-items: center;
+  font-style: normal;
+}
+
+[class*="{{classPrefix}}"]::before {
+	font-family: {{fontName}};
+  font-style: normal;
+}
+
+{{#each codepoints}}
+[class*="{{../classPrefix}}{{@key}}"]::before {
+  content: "\\{{this}}";
+}
+
+{{/each}}

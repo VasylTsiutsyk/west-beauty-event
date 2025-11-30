@@ -1,0 +1,65 @@
+<div class="[[bemClasses]] menu" data-menu>
+  <span id="nav-label" class="sr-only">Navigation</span>
+
+  <button
+    class="menu__btn"
+    title="Menu"
+    aria-label="Open Menu"
+    aria-expanded="false"
+    aria-labelledby="nav-label"
+    aria-controls="site-menu"
+    data-menu-burger
+  >
+    <span aria-hidden></span>
+  </button>
+
+  <nav
+    class="menu__body"
+    id="site-menu"
+    role="navigation"
+    aria-label="Main Navigation"
+    data-menu-body
+  >
+    <ul class="menu__list">
+      <li>
+        <a href="#">Item</a>
+      </li>
+
+      <li>
+        <a href="#">Item</a>
+      </li>
+
+      <li>
+        <a href="#">Item</a>
+
+        <button
+          class="menu__arrow"
+          aria-label="Expand Submenu"
+          data-menu-arrow
+        ></button>
+
+        <div class="menu__sublist menu-sublist">
+          <div class="menu-sublist__inner">
+            <div class="menu-sublist__pad">
+              <ul class="menu-sublist__list">
+                <li>
+                  <a href="#">Item</a>
+                </li>
+
+                <li>
+                  <a href="#">Item</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="menu__btn-box">
+      <a href="#" class="btn btn--primary">
+        <span class="btn__text">Button</span>
+      </a>
+    </div>
+  </nav>
+</div>
