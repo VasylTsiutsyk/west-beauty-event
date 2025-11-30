@@ -1,0 +1,84 @@
+@use '@styles/helpers' as *;
+
+/* Speaker Card */
+.speaker-card {
+  --card-img-size: #{fluid(220, 124)};
+  --card-img-p: #{fluid(8, 4)};
+  --card-img-offset: #{fluid(100, 64)};
+  --card-text-px: #{fluid(32, 20)};
+  --card-text-py: #{fluid(32, 20)};
+
+  // Theme
+  --theme: 73 74 253;
+  --theme-text-color: rgb(var(--theme) / 100%);
+  --theme-surface-color: linear-gradient(0deg, rgb(var(--theme) / 15%) 0%, transparent 100%);
+
+  display: block;
+  text-align: center;
+
+  &[data-variant='purple'] {
+    --theme: 73 74 253;
+    --theme-text-color: rgb(var(--theme) / 100%);
+    --theme-surface-color: linear-gradient(0deg, rgb(var(--theme) / 15%) 0%, transparent 100%);
+  }
+
+  &[data-variant='orange'] {
+    --theme: 255 92 0;
+  }
+
+  &[data-variant='green'] {
+    --theme: 47 181 82;
+  }
+
+  &[data-variant='pink'] {
+    --theme: 242 69 112;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 9;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--card-img-size);
+    padding: var(--card-img-p);
+    background-image: linear-gradient(0deg, rgb(var(--theme) / 100%) 0%, transparent 100%);
+    block-size: var(--card-img-size);
+    inline-size: var(--card-img-size);
+    margin-inline: auto;
+
+    img {
+      display: block;
+      border-radius: inherit;
+      object-fit: cover;
+      block-size: 100%;
+      inline-size: 100%;
+    }
+  }
+
+  &__text {
+    border-radius: var(--radius-pill);
+    padding: var(--card-text-py) var(--card-text-px);
+    background: var(--theme-surface-color);
+    margin-block-start: calc(var(--card-img-offset) * -1);
+    padding-block-start: calc(var(--card-text-py) + var(--card-img-offset));
+  }
+
+  &__name {
+    font-size: fluid(26, 20);
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-block-end: fluid(14, 8);
+    }
+  }
+
+  &__role {
+    font-size: rem(13);
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: var(--theme-text-color);
+  }
+}

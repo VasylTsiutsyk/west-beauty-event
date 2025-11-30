@@ -1,0 +1,51 @@
+@use '@styles/helpers' as *;
+
+/* Section Speaker */
+.section-speaker {
+  &__wrap {
+    padding-block: var(--section-py);
+  }
+
+  &__decor-title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: fluid(16, 12);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-block-end: fluid(80, 32);
+    }
+  }
+
+  &__cards {
+    --col-gap: #{fluid(36, 20)};
+    --col-width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-inline: calc(var(--col-gap) / 2 * -1);
+    row-gap: var(--col-gap);
+
+    @include respond-above(sm) {
+      --col-width: 50%;
+    }
+
+    @include respond-above(md) {
+      --col-width: 33.33%;
+    }
+
+    > li {
+      flex: 0 0 var(--col-width);
+      max-inline-size: var(--col-width);
+      padding-inline: calc(var(--col-gap) / 2);
+    }
+  }
+}

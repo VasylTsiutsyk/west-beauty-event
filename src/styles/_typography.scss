@@ -61,7 +61,8 @@ h1,
   letter-spacing: var(--h1-letter-spacing);
 }
 
-:where(h2, .h2) {
+h2,
+.h2 {
   font-size: var(--h2-font-size);
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
@@ -185,4 +186,8 @@ h1,
   line-height: 1.875;
   text-transform: uppercase;
   color: var(--color-primary);
+
+  &--purple {
+    color: var(--color-purple);
+  }
 }

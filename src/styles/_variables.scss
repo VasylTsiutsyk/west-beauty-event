@@ -49,7 +49,7 @@
   --h1-letter-spacing: var(--display-letter-spacing);
 
   // h2
-  --h2-font-size: #{fluid(48, 24)};
+  --h2-font-size: #{fluid(40, 24)};
   --h2-font-weight: var(--display-font-weight);
   --h2-line-height: var(--display-line-height);
   --h2-letter-spacing: var(--display-letter-spacing);
@@ -110,12 +110,24 @@
   // Blue
   --color-blue-storm: #000b47;
 
+  // Gray
+  --color-gray: #c8c8c8;
+
+  // Purple
+  --color-purple: #494afd;
+
+  // Green
+  --color-green: #2fb552;
+
+  // Orange
+  --color-orange: #ff5c00;
+
+  // Pink
+  --color-pink: #f24570;
+
   // Other
   --color-durazno-maduro: #fdb978;
   --color-durazno-maduro-rgb: 253 185 120;
-
-  // Gray
-  --color-gray: #c8c8c8;
 
   /* Semantic */
   --color-bg: var(--color-white); // фон сторінки/секцій
@@ -150,6 +162,7 @@
   --radius-24: 1.5rem;
   --radius-32: 2rem;
   --radius-36: 2.25rem;
+  --radius-pill: 9999px;
 
   /* Scrollbar */
   --scrollbar-border-radius: 0;
