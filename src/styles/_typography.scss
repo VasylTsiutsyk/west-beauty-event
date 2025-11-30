@@ -177,3 +177,12 @@ h1,
     margin-block-start: var(--text-flow-spacing);
   }
 }
+
+/* Decor Title */
+.decor-title {
+  font-size: rem(16);
+  font-weight: var(--display-font-weight);
+  line-height: 1.875;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}

@@ -5,6 +5,7 @@ import { SELECTORS, CLASSES } from './modules/constants';
 import { isWebp, isMobile } from './modules/functions';
 import { initMenu } from './modules/menu';
 import { initHeader } from './modules/header';
+import { initAosAnimations } from './modules/animations';
 
 document.addEventListener('DOMContentLoaded', () => {
   // IS WEBP TEST
@@ -87,9 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // initFancyboxes();
 
   // ANIMATIONS
-  // import { initAosAnimations, initGSAPAnimations } from './modules/animations';
-  // initAosAnimations();
-  // initGSAPAnimations();
+  initAosAnimations();
 
   // IMG PARALLAX
   // import initImgParallax from './modules/img-parallax';

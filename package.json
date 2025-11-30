@@ -1,5 +1,5 @@
 {
-  "name": "tsvv-start",
+  "name": "west-beauty-event",
   "type": "module",
   "version": "1.0.0",
   "homepage": "",
@@ -85,6 +85,7 @@
     "@img/sharp-win32-x64": "latest"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "bowser": "^2.11.0"
   }
 }

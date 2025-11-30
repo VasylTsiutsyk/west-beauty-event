@@ -1,0 +1,72 @@
+@use '@styles/helpers' as *;
+
+/* Event Card */
+.event-card {
+  --card-px: #{fluid(30, 16)};
+  --card-py: #{fluid(30, 16)};
+
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-20);
+  padding: var(--card-py) var(--card-px);
+  background-color: var(--color-white-fever);
+  color: var(--color-blue-storm);
+
+  @include hover {
+    .event-card__img {
+      img {
+        scale: 1.1;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--radius-16);
+    padding-block-end: 59.5%;
+
+    &:not(:last-child) {
+      margin-block-end: var(--space-5);
+
+      @include respond-below(md) {
+        margin-block-end: var(--space-4);
+      }
+    }
+
+    img {
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      will-change: scale;
+      transition: scale var(--transition-duration-slow);
+      block-size: 100%;
+      inline-size: 100%;
+    }
+  }
+
+  &__header {
+    &:not(:last-child) {
+      margin-block-end: fluid(20, 12);
+      padding-block-end: fluid(20, 12);
+      border-block-end: rem(1) solid #ccc;
+    }
+  }
+
+  &__title {
+    font-size: fluid(26, 20);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-block-end: var(--space-3);
+    }
+  }
+
+  &__subtitle {
+    font-size: fluid(18, 16);
+    font-weight: var(--body-font-weight);
+    line-height: 1.2;
+  }
+}

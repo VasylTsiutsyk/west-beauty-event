@@ -1,0 +1,99 @@
+@use '@styles/helpers' as *;
+
+/* Section Event */
+.section-event {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white);
+  color: var(--color-text);
+
+  &__wrap {
+    padding-block: var(--section-py);
+  }
+
+  &__decor-title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: var(--space-4);
+
+      @include respond-below(md) {
+        margin-block-end: var(--space-3);
+      }
+
+      @include respond-below(sm) {
+        margin-block-end: var(--space-2);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: fluid(60, 32);
+    }
+  }
+
+  &__decor {
+    &:not(:last-child) {
+      margin-block-end: fluid(50, 32);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: var(--space-6);
+    grid-template-columns: var(--grid-3);
+
+    @include respond-below(md) {
+      grid-template-columns: var(--grid-2);
+    }
+
+    @include respond-below(sm) {
+      grid-template-columns: var(--grid-1);
+    }
+  }
+}
+
+.event-decor {
+  --decor-dot-size: #{fluid(42, 32)};
+
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: rem(4);
+    background-color: rgb(var(--color-primary-rgb) / 20%);
+    transform: translateY(-50%);
+    block-size: rem(4);
+    inline-size: 100%;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+  }
+
+  &__dot {
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    border: rem(1) dashed var(--color-primary);
+    border-radius: var(--decor-dot-size);
+    background-color: var(--color-surface);
+    block-size: var(--decor-dot-size);
+    inline-size: var(--decor-dot-size);
+    margin-inline: auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      border: rem(4) solid var(--color-primary);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      block-size: 60%;
+      inline-size: 60%;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+    }
+  }
+}

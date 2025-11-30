@@ -107,8 +107,12 @@
   --color-white-doctor: #f9f9f9;
   --color-white-fever: #fbf3e8;
 
+  // Blue
+  --color-blue-storm: #000b47;
+
   // Other
   --color-durazno-maduro: #fdb978;
+  --color-durazno-maduro-rgb: 253 185 120;
 
   // Gray
   --color-gray: #c8c8c8;
@@ -128,6 +132,7 @@
 
   // Primary/Secondary
   --color-primary: var(--color-durazno-maduro);
+  --color-primary-rgb: var(--color-durazno-maduro-rgb);
 
   /* Transitions */
   --transition-duration: 0.35s;
@@ -226,11 +231,15 @@
   /* Header */
   --header-height: #{rem(80)};
 
+  /* Section */
+  --section-py: #{fluid(106, 48)};
+
   /* Spacing scale (4pt) */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-7: 1.75rem;
   --space-8: 2rem;

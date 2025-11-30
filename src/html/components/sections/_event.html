@@ -1,0 +1,63 @@
+<section class="section-event" aria-labelledby="sectionAboutEventTitle">
+  <div class="section-event__container container">
+    <div class="section-event__wrap">
+      <h2
+        class="section-event__decor-title decor-title"
+        id="sectionAboutEventTitle"
+        data-aos="fade-up"
+      >
+        Про подію
+      </h2>
+
+      <h3 class="section-event__title" data-aos="fade-up" data-aos-delay="100">
+        Опис номінацій
+      </h3>
+
+      <div class="section-event__decor event-decor" aria-hidden="true">
+        <div
+          class="event-decor__dot"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        ></div>
+      </div>
+
+      <ul class="section-event__cards">
+        <li data-aos="fade-up" data-aos-delay="400">
+          <include
+            src="@cards/_event-card.html"
+            locals='{ 
+              "id": "01",
+              "img": "@img/home/event/01.jpg",
+              "title": "BROW PRO",
+              "subtitle": "Чемпіонат з моделювання та фарбування брів"
+            }'
+          ></include>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="500">
+          <include
+            src="@cards/_event-card.html"
+            locals='{ 
+              "id": "02",
+              "img": "@img/home/event/01.jpg",
+              "title": "BROW PRO",
+              "subtitle": "Чемпіонат з моделювання та фарбування брів"
+            }'
+          ></include>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="600">
+          <include
+            src="@cards/_event-card.html"
+            locals='{ 
+              "id": "03",
+              "img": "@img/home/event/01.jpg",
+              "title": "BROW PRO",
+              "subtitle": "Чемпіонат з моделювання та фарбування брів"
+            }'
+          ></include>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

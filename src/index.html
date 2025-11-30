@@ -1,14 +1,14 @@
 <template
   src="html/templates/main/main.html"
   locals='{
-		"title": "Home",
+		"title": "WEST BEAUTY EVENT",
 		"lang": "en",
 		"preloader": {
 			"enable": "false",
 			"once": "false"
 		},
-		"keywords": "ProjectName Keywords",
-		"description": "ProjectName Description"
+		"keywords": "WEST BEAUTY EVENT Keywords",
+		"description": "WEST BEAUTY EVENT Description"
 	}'
 >
   <!-- Header -->
@@ -21,11 +21,14 @@
 
   <!-- Main Content -->
   <block name="main">
-    <!-- Section 01: Hero (in progress) -->
+    <!-- Section 01: Hero (done) -->
     <include src="html/pages/home/_01-hero.html" locals="{}"></include>
 
     <!-- Section 02: About (in progress) -->
     <include src="html/pages/home/_02-about.html" locals="{}"></include>
+
+    <!-- Section 03: About Event (done) -->
+    <include src="html/components/sections/_event.html" locals="{}"></include>
   </block>
 
   <!-- Footer -->
