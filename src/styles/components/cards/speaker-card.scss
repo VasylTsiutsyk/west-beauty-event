@@ -52,7 +52,7 @@
 
     img {
       display: block;
-      border-radius: inherit;
+      border-radius: var(--card-img-size);
       object-fit: cover;
       block-size: 100%;
       inline-size: 100%;
