@@ -7,6 +7,7 @@ import { initMenu } from './modules/menu';
 import { initHeader } from './modules/header';
 import { initAosAnimations } from './modules/animations';
 import initContentTabs from './modules/content-tabs';
+import initAccordions from './modules/accordion';
 
 document.addEventListener('DOMContentLoaded', () => {
   // IS WEBP TEST
@@ -30,6 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Content Tabs
   initContentTabs();
+
+  // Accordions
+  initAccordions('[data-accordion]', {
+    showOnlyOne: true,
+    closeOnClickOutside: true,
+  });
 
   SELECTORS.BODY.classList.add(CLASSES.LOADED);
 });

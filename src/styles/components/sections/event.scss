@@ -54,11 +54,21 @@
       grid-template-columns: var(--grid-1);
     }
 
+    &:not(:last-child) {
+      margin-block-end: fluid(80, 48);
+    }
+
     > li {
       .event-card {
         min-block-size: 100%;
       }
     }
+  }
+
+  &__accordions {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(24, 12);
   }
 }
 
