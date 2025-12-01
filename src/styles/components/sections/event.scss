@@ -53,6 +53,12 @@
     @include respond-below(sm) {
       grid-template-columns: var(--grid-1);
     }
+
+    > li {
+      .event-card {
+        min-block-size: 100%;
+      }
+    }
   }
 }
 

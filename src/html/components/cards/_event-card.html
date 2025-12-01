@@ -18,25 +18,15 @@
 
   <div class="event-card__body">
     <div class="event-card__desc-text desc-text desc-text--lg">
-      <p>
-        <strong>Ціль чемпіонату:</strong> підвищення кваліфікації бровистів,
-        відпрацювання швидкості та якості виконання процедури
-      </p>
+      <p><strong>Ціль чемпіонату:</strong> [[purpose]]</p>
 
       <p>
         <strong>Категорії:</strong>
       </p>
 
-      <p>
-        - «All Participants» спеціалісти, які мають практичний досвід роботи і
-        не є членами Міжнародної асоціації бровистів (ІАВА). Час виконання
-        роботи 40 хв.
-      </p>
-
-      <p>
-        - «IABA Members» члени міжнародної асоціації бровистів Level 1 та Level
-        2 . Час виконання роботи 35 хв.
-      </p>
+      <each loop="category in categories">
+        <p>- [[category.label]]</p>
+      </each>
     </div>
   </div>
 </article>

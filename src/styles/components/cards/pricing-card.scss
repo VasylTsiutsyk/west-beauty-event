@@ -6,7 +6,8 @@
   --card-py: #{fluid(40, 20)};
   --card-theme: var(--color-green-rgb);
 
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: var(--radius-20);
   background-color: var(--color-surface);
@@ -53,6 +54,7 @@
   }
 
   &__body {
+    flex: 1 1 auto;
     padding: var(--card-py) var(--card-px);
   }
 
