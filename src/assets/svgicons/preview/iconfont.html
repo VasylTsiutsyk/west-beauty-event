@@ -63,7 +63,7 @@
 		/* Icons */
 @font-face {
 	font-family: "iconfont";
-  src: url("C://Users/Vasyl/Desktop/WEB/_SETUP/setup-vite/src/assets/svgicons/preview/iconfont.woff2?beb58afb7279e8f6ca9a62d5dd5be267") format("woff2");
+  src: url("C://Users/Vasyl/Desktop/WEB/FREELANCE/huzyk/west-beauty-event/src/assets/svgicons/preview/iconfont.woff2?15bfedca21b820f5e76da86f100dd37c") format("woff2");
 	font-display: swap;
   font-weight: 400;
 }
@@ -97,13 +97,14 @@
   --icon-chevron-left: "\f11a";
   --icon-chevron-down: "\f11b";
   --icon-check: "\f11c";
-  --icon-behance: "\f11d";
-  --icon-at-sign: "\f11e";
-  --icon-arrow-up: "\f11f";
-  --icon-arrow-right: "\f120";
-  --icon-arrow-left: "\f121";
-  --icon-arrow-down: "\f122";
-  --icon-alert-circle: "\f123";
+  --icon-calendar: "\f11d";
+  --icon-behance: "\f11e";
+  --icon-at-sign: "\f11f";
+  --icon-arrow-up: "\f120";
+  --icon-arrow-right: "\f121";
+  --icon-arrow-left: "\f122";
+  --icon-arrow-down: "\f123";
+  --icon-alert-circle: "\f124";
 }
 
 [class*="icon-"] {
@@ -229,32 +230,36 @@
   content: "\f11c";
 }
 
-[class*="icon-behance"]::before {
+[class*="icon-calendar"]::before {
   content: "\f11d";
 }
 
-[class*="icon-at-sign"]::before {
+[class*="icon-behance"]::before {
   content: "\f11e";
 }
 
-[class*="icon-arrow-up"]::before {
+[class*="icon-at-sign"]::before {
   content: "\f11f";
 }
 
-[class*="icon-arrow-right"]::before {
+[class*="icon-arrow-up"]::before {
   content: "\f120";
 }
 
-[class*="icon-arrow-left"]::before {
+[class*="icon-arrow-right"]::before {
   content: "\f121";
 }
 
-[class*="icon-arrow-down"]::before {
+[class*="icon-arrow-left"]::before {
   content: "\f122";
 }
 
-[class*="icon-alert-circle"]::before {
+[class*="icon-arrow-down"]::before {
   content: "\f123";
+}
+
+[class*="icon-alert-circle"]::before {
+  content: "\f124";
 }
 
 
@@ -1074,6 +1079,35 @@
               class="copy-btn"
               data-copy="content: var(--icon-check);"
               aria-label="Copy CSS content for icon-check">
+              Copy
+            </button>
+          </div>
+        </div>
+      </li>
+			<li>
+        <i class="icon-calendar"></i>
+        
+        <div>
+          <div>
+            <span>icon-calendar</span>
+
+            <button
+              type="button"
+              class="copy-btn"
+              data-copy="icon-calendar"
+              aria-label="Copy icon name icon-calendar">
+              Copy
+            </button>
+          </div>
+
+          <div>
+            <code>content: var(--icon-calendar);</code>
+
+            <button
+              type="button"
+              class="copy-btn"
+              data-copy="content: var(--icon-calendar);"
+              aria-label="Copy CSS content for icon-calendar">
               Copy
             </button>
           </div>

@@ -1,0 +1,115 @@
+<section class="section-schedule" aria-labelledby="sectionEventsScheduleTitle">
+  <div class="section-schedule__container container">
+    <div class="section-schedule__wrap">
+      <h2
+        class="section-schedule__decor-title decor-title"
+        id="sectionEventsScheduleTitle"
+        data-aos="fade-up"
+      >
+        Розклад заходів
+      </h2>
+
+      <h3
+        class="section-schedule__title h2"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Schedule Of The Event
+      </h3>
+
+      <div class="section-schedule__row" data-ct="eventsSchedule">
+        <div class="section-schedule__col section-schedule__col--aside">
+          <ul class="section-schedule__tabs">
+            <li>
+              <button class="schedule-tab" data-ct-tab="day01">
+                <div class="schedule-tab__row">
+                  <i class="schedule-tab__icon" aria-hidden="true"></i>
+
+                  <div class="schedule-tab__text">
+                    <div class="schedule-tab__label">1 день</div>
+
+                    <div class="schedule-tab__value">27 Березня</div>
+                  </div>
+                </div>
+              </button>
+            </li>
+
+            <li>
+              <button class="schedule-tab" data-ct-tab="day02">
+                <div class="schedule-tab__row">
+                  <i class="schedule-tab__icon" aria-hidden="true"></i>
+
+                  <div class="schedule-tab__text">
+                    <div class="schedule-tab__label">2 День</div>
+
+                    <div class="schedule-tab__value">28 Березня</div>
+                  </div>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section-schedule__col section-schedule__col--main">
+          <div class="section-schedule__panels">
+            <div class="section-schedule__panel" data-ct-panel="day01">
+              <ul class="section-schedule__cards">
+                <li>
+                  <include
+                    src="@cards/_schedule-card.html"
+                    locals='{ 
+                      "id": "01",
+                      "variant": "green",
+                      "time": "10:00 - 11:00",
+                      "title": "Реєстрація учасників чемпіонату"
+                    }'
+                  ></include>
+                </li>
+
+                <li>
+                  <include
+                    src="@cards/_schedule-card.html"
+                    locals='{ 
+                      "id": "02",
+                      "variant": "primary",
+                      "time": "11:00 - 12:30",
+                      "title": "Чемпіонат з моделювання та фарбування брів “BROW SHAMPING & TINTING”"
+                    }'
+                  ></include>
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-schedule__panel" data-ct-panel="day02">
+              <ul class="section-schedule__cards">
+                <li>
+                  <include
+                    src="@cards/_schedule-card.html"
+                    locals='{ 
+                      "id": "01",
+                      "variant": "green",
+                      "time": "10:00 - 11:00",
+                      "title": "Реєстрація учасників чемпіонату 02"
+                    }'
+                  ></include>
+                </li>
+
+                <li>
+                  <include
+                    src="@cards/_schedule-card.html"
+                    locals='{ 
+                      "id": "02",
+                      "variant": "primary",
+                      "time": "11:00 - 12:30",
+                      "title": "Чемпіонат з моделювання та фарбування брів “BROW SHAMPING & TINTING”"
+                    }'
+                  ></include>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

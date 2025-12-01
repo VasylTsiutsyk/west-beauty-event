@@ -1,0 +1,55 @@
+@use '@styles/helpers' as *;
+
+/* Schedule Card */
+.schedule-card {
+  --card-px: #{fluid(48, 16)};
+  --card-py: #{fluid(44, 20)};
+  --card-theme: var(--color-green-rgb);
+
+  display: block;
+  border-radius: fluid(20, 12);
+  padding: var(--card-py) var(--card-px);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+
+  &[data-variant='primary'] {
+    --card-theme: var(--color-primary-rgb);
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: fluid(36, 16);
+
+    @include respond-below(md) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    min-inline-size: 0;
+  }
+
+  &__time {
+    flex-shrink: 0;
+    border-radius: fluid(8, 4);
+    padding: fluid(8, 4) fluid(16, 12);
+    background-color: rgb(var(--card-theme) / 10%);
+    font-size: fluid(17, 14);
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(var(--card-theme) / 100%);
+    min-inline-size: fluid(136, 96);
+    text-wrap: nowrap;
+  }
+
+  &__title {
+    font-size: fluid(26, 20);
+    text-transform: capitalize;
+  }
+}
