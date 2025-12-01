@@ -46,6 +46,10 @@
     inline-size: var(--card-img-size);
     margin-inline: auto;
 
+    picture {
+      display: contents;
+    }
+
     img {
       display: block;
       border-radius: inherit;
