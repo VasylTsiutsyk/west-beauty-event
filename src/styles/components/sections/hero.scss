@@ -52,10 +52,10 @@
   }
 
   &__header {
-    --mb: #{rem(16)};
+    overflow: hidden;
 
     &:not(:last-child) {
-      margin-block-end: var(--mb);
+      margin-block-end: var(--space-4);
     }
   }
 
