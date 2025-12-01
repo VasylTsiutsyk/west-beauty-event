@@ -2,5 +2,111 @@
 @use '@styles/helpers' as *;
 
 .footer {
+  position: relative;
   display: block;
+  overflow: hidden;
+
+  &__bottom {
+    &:not(:first-child) {
+      border-block-start: rem(1) solid var(--color-black-10);
+    }
+  }
+}
+
+.footer-top {
+  padding-block: fluid(80, 48);
+
+  &__row {
+    --col-width: 100%;
+    --col-gap: #{fluid(32, 24)};
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: calc(var(--col-gap) / 2 * -1);
+    row-gap: var(--col-gap);
+
+    @include respond-above(md) {
+      --col-width: 25%;
+    }
+  }
+
+  &__col {
+    flex: 0 0 var(--col-width);
+    max-width: var(--col-width);
+    padding-inline: calc(var(--col-gap) / 2);
+  }
+
+  &__logo {
+    vertical-align: top;
+
+    &:not(:last-child) {
+      margin-block-end: fluid(36, 24);
+    }
+
+    img {
+      vertical-align: top;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    &:not(:last-child) {
+      margin-block-end: fluid(24, 16);
+    }
+  }
+}
+
+.footer-bottom {
+  padding-block: fluid(28, 20);
+
+  &__copyright {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer-group {
+  &__title {
+    font-size: fluid(24, 22);
+
+    &:not(:last-child) {
+      margin-block-end: fluid(24, 16);
+    }
+  }
+
+  &__nav {
+    font-size: fluid(18, 16);
+  }
+
+  &__menu {
+    > li {
+      &:not(:last-child) {
+        margin-block-end: fluid(12, 8);
+      }
+
+      > a {
+        transition: color var(--transition-duration);
+
+        @include hover {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  &__metas {
+    font-size: fluid(20, 18);
+    font-weight: var(--display-font-weight);
+    line-height: var(--display-line-height);
+
+    > li {
+      &:not(:last-child) {
+        margin-block-end: fluid(8, 4);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-block-end: fluid(24, 16);
+    }
+  }
 }
