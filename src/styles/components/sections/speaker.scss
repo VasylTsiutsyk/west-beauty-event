@@ -19,6 +19,16 @@
     text-transform: capitalize;
 
     &:not(:last-child) {
+      margin-block-end: fluid(32, 20);
+    }
+  }
+
+  &__desc-text {
+    text-align: center;
+    margin-inline: auto;
+    max-inline-size: rem(980);
+
+    &:not(:last-child) {
       margin-block-end: fluid(80, 32);
     }
   }
