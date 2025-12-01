@@ -1,0 +1,27 @@
+<article class="pricing-card" data-variant="[[variant]]">
+  <div class="pricing-card__header">
+    <div class="pricing-card__type">[[type]]</div>
+
+    <div class="pricing-card__price">[[price]]</div>
+  </div>
+
+  <div class="pricing-card__body">
+    <ul class="pricing-card__list">
+      <each loop="item in items">
+        <if condition="'[[item.disabled]]' === 'true'">
+          <li class="_disabled">[[item.label]]</li>
+        </if>
+
+        <else>
+          <li>[[item.label]]</li>
+        </else>
+      </each>
+    </ul>
+  </div>
+
+  <div class="pricing-card__footer">
+    <button class="pricing-card__btn" data-variant="[[variant]]">
+      <span>buy ticket now</span>
+    </button>
+  </div>
+</article>

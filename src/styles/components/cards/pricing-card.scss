@@ -1,0 +1,106 @@
+@use '@styles/helpers' as *;
+
+/* Pricing Card */
+.pricing-card {
+  --card-px: #{fluid(40, 16)};
+  --card-py: #{fluid(40, 20)};
+  --card-theme: var(--color-green-rgb);
+
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-20);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+
+  &[data-variant='orange'] {
+    --card-theme: var(--color-orange-rgb);
+  }
+
+  &[data-variant='purple'] {
+    --card-theme: var(--color-purple-rgb);
+  }
+
+  &__header {
+    padding: var(--card-py) var(--card-px);
+
+    &:not(:last-child) {
+      border-block-end: rem(1) dashed rgb(var(--card-theme) / 100%);
+    }
+  }
+
+  &__type {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    border-radius: fluid(8, 4);
+    padding: fluid(8, 4) fluid(16, 12);
+    background-color: rgb(var(--card-theme) / 10%);
+    font-size: fluid(17, 14);
+    font-weight: var(--display-font-weight);
+    line-height: 1.175;
+    text-transform: uppercase;
+    color: rgb(var(--card-theme) / 100%);
+
+    &:not(:last-child) {
+      margin-block-end: fluid(36, 24);
+    }
+  }
+
+  &__price {
+    font-size: fluid(60, 32);
+    font-weight: var(--display-font-weight);
+    line-height: 1;
+  }
+
+  &__body {
+    padding: var(--card-py) var(--card-px);
+  }
+
+  &__list {
+    font-size: fluid(18, 15);
+    font-weight: var(--body-font-weight);
+    line-height: 1.2;
+
+    > li {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      padding-block: fluid(8, 6);
+
+      &::before {
+        content: var(--icon-chevrons-right);
+        font-family: var(--font-icons);
+        font-size: 80%;
+      }
+
+      &._disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__footer {
+    padding: 0 var(--card-px) var(--card-py);
+  }
+
+  &__btn {
+    border: none;
+    border-radius: rem(60);
+    padding: fluid(20, 16) fluid(44, 32);
+    background-color: rgb(var(--card-theme) / 100%);
+    font-size: fluid(17, 15);
+    font-weight: 700;
+    line-height: 1.175;
+    text-transform: capitalize;
+    color: var(--color-white);
+    transition: box-shadow var(--transition-duration);
+
+    &:not(:disabled) {
+      cursor: pointer;
+
+      @include hover {
+        box-shadow: 0 0 0 0.5rem rgb(var(--card-theme) / 15%);
+      }
+    }
+  }
+}

@@ -106,6 +106,7 @@
   --color-white-90: rgb(var(--color-white-rgb) / 90%);
   --color-white-doctor: #f9f9f9;
   --color-white-fever: #fbf3e8;
+  --color-white-solid: #f4f5f9;
 
   // Blue
   --color-blue-storm: #000b47;
@@ -115,12 +116,15 @@
 
   // Purple
   --color-purple: #494afd;
+  --color-purple-rgb: 73 74 253;
 
   // Green
   --color-green: #2fb552;
+  --color-green-rgb: 47 181 82;
 
   // Orange
   --color-orange: #ff5c00;
+  --color-orange-rgb: 255 92 0;
 
   // Pink
   --color-pink: #f24570;
@@ -193,17 +197,17 @@
   /* Input */
   --input-border-width: 1px;
   --input-border-style: solid;
-  --input-border-color: var(--color-black);
-  --input-border-radius: 0.25rem;
-  --input-height: 3rem;
-  --input-px: 1rem;
-  --input-py: 0.5rem;
+  --input-border-color: var(--color-gray);
+  --input-border-radius: 3rem;
+  --input-height: #{rem(52)};
+  --input-px: #{rem(24)};
+  --input-py: #{rem(8)};
   --input-font-size: 1rem;
   --input-font-weight: 400;
   --input-line-height: 1;
   --input-bg-color: var(--color-white);
   --input-text-color: var(--color-black);
-  --input-placeholder-color: var(--color-black-80);
+  --input-placeholder-color: var(--color-black-40);
 
   /* Select */
   --select-border-width: 1px;

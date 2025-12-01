@@ -1,0 +1,63 @@
+@use '@styles/helpers' as *;
+
+/* Section CTA */
+.section-cta {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white-fever);
+  color: var(--color-text);
+
+  &__wrap {
+    padding-block: var(--section-py);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: fluid(32, 24);
+  }
+
+  &__col {
+    &--text {
+      max-width: rem(564);
+    }
+
+    &--form {
+      flex-grow: 1;
+      min-inline-size: rem(280);
+
+      @include respond-above(sm) {
+        max-inline-size: rem(380);
+      }
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: fluid(28, 20);
+    }
+  }
+}
+
+/* CTA Form */
+.cta-form {
+  display: block;
+
+  &__body {
+    &:not(:last-child) {
+      margin-block-end: fluid(32, 24);
+    }
+  }
+
+  &__group {
+    &:not(:last-child) {
+      margin-block-end: fluid(24, 16);
+    }
+  }
+
+  &__btn {
+    inline-size: 100%;
+  }
+}

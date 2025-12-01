@@ -1,0 +1,39 @@
+@use '@styles/helpers' as *;
+
+/* Section Pricing */
+.section-pricing {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-white-fever);
+  color: var(--color-text);
+
+  &__wrap {
+    padding-block: var(--section-py);
+  }
+
+  &__decor-title {
+    &:not(:last-child) {
+      margin-block-end: fluid(16, 8);
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: fluid(64, 24);
+    }
+  }
+
+  &__cards {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: var(--grid-3);
+
+    @include respond-below(md) {
+      grid-template-columns: var(--grid-2);
+    }
+
+    @include respond-below(sm) {
+      grid-template-columns: var(--grid-1);
+    }
+  }
+}
