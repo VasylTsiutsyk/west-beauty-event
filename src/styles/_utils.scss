@@ -26,6 +26,10 @@
     }
   }
 
+  &:has(._has-sticky-children) {
+    overflow: visible;
+  }
+
   > main {
     flex-grow: 1;
   }

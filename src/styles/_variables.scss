@@ -247,7 +247,7 @@
   --grid-3-2: minmax(0, 3fr) minmax(0, 2fr);
 
   /* Header */
-  --header-height: #{rem(80)};
+  --header-height: #{rem(98)};
 
   /* Section */
   --section-py: #{fluid(106, 48)};
@@ -287,6 +287,9 @@
   @include respond-below(md) {
     // Container
     --container-padding: #{rem(16)};
+
+    // Header
+    --header-height: #{rem(74)};
   }
 
   @supports not (height: 100dvh) {
