@@ -25,7 +25,7 @@
     display: block;
     overflow: hidden;
     border-radius: var(--radius-16);
-    padding-block-end: 59.5%;
+    padding-block-end: 100%;
 
     &:not(:last-child) {
       margin-block-end: var(--space-5);
@@ -39,6 +39,7 @@
       position: absolute;
       inset: 0;
       object-fit: cover;
+      object-position: center top;
       will-change: scale;
       transition: scale var(--transition-duration-slow);
       block-size: 100%;
